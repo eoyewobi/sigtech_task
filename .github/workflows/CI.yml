@@ -27,7 +27,7 @@ jobs:
       run: echo "bandit_report_path=bandit-report.json" >> $GITHUB_OUTPUT
 
     - name: Upload Bandit report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: bandit-report
         path: ${{ steps.set-bandit-report.outputs.bandit_report_path }}
