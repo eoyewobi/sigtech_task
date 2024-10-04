@@ -8,6 +8,11 @@ RUN pip install --upgrade pip
 # Set the working directory
 WORKDIR /app
 
+# venv
+ENV VIRTUAL_ENV=/home/app/venv
+RUN python -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
 # Copy the current directory contents into the container at /app
 COPY app.py requirements.txt ./
 
