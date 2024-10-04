@@ -2,6 +2,10 @@
 FROM python:3.13.0rc2-slim
 LABEL authors="Emmanuel"
 
+# Install system dependencies required for mysqlclient
+RUN apt-get update && \
+    apt-get install -y default-libmysqlclient-dev build-essential pkg-config
+
 # Upgrade pip
 RUN pip install --upgrade pip
 
