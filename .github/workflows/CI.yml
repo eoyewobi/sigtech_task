@@ -38,9 +38,9 @@ jobs:
       uses: actions/checkout@v4.2.0
 
     - name: Set Up Docker
-      uses: docker-practice/actions-setup-docker@v1
+      uses: docker/setup-buildx-action@v3.7.1
       with:
-        docker_version: '22.04'
+        version: '22.04'
 
     - name: Build Docker Image
       run: docker build -f Dockerfile -t myapp:latest .
