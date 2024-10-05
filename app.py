@@ -10,11 +10,12 @@ db_name = os.getenv('DB_NAME')
 db_user = os.getenv('DB_USER')
 db_password = os.getenv('DB_PASSWORD')
 
+
 def connect_to_database():
     try:
         connection = mysql.connector.connect(
             host=db_host,
-            user='root',
+            user=db_user,
             password=db_password,
             database=db_name
         )
@@ -26,6 +27,7 @@ def connect_to_database():
     except mysql.connector.Error as err:
         return f"Error: {err}"
 
+
 @app.route('/')
 def hello_world():
     db_message = connect_to_database()
@@ -33,4 +35,4 @@ def hello_world():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=80)

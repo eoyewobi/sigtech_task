@@ -14,7 +14,7 @@ services:
   python-app:
     build: .
     ports:
-      - "8080:8080"
+      - "80:80"
     networks:
       - app-network
     depends_on:
@@ -22,6 +22,7 @@ services:
     environment:
       DB_HOST: mysql
       DB_NAME: "${MYSQL_DATABASE}"
+      DB_USER: "root"
       DB_PASSWORD: "${MYSQL_ROOT_PASSWORD}"  # Avoiding hardcoded passwords
 
 networks:
