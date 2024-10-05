@@ -1,16 +1,22 @@
+import os
 from flask import Flask
 import mysql.connector
 
 app = Flask(__name__)
 
+# Get the MySQL credentials from environment variables
+db_host = os.getenv('DB_HOST', 'localhost')
+db_name = os.getenv('DB_NAME')
+db_user = os.getenv('DB_USER')
+db_password = os.getenv('DB_PASSWORD')
 
 def connect_to_database():
     try:
         connection = mysql.connector.connect(
-            host='mysql',
+            host=db_host,
             user='root',
-            password='example-password',
-            database='test_database'
+            password=db_password,
+            database=db_name
         )
         cursor = connection.cursor()
         cursor.execute("CREATE DATABASE IF NOT EXISTS test_database;")
@@ -19,7 +25,6 @@ def connect_to_database():
         return "Successfully connected to the database and ensured test_database exists."
     except mysql.connector.Error as err:
         return f"Error: {err}"
-
 
 @app.route('/')
 def hello_world():
