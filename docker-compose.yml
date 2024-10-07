@@ -8,6 +8,8 @@ services:
       MYSQL_DATABASE: "${MYSQL_DATABASE}"
     ports:
       - "3306:3306"
+    volumes:
+      - ./mysql-init.sh:/docker-entrypoint-initdb.d/mysql-init.sh
     networks:
       - app-network
 
