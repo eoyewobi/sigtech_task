@@ -15,7 +15,10 @@ Prerequisites
 Make sure you have the following installed:
 
 Docker
+
 Docker Compose
+
+
 Getting Started
 Clone the Repository
 
