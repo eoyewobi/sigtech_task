@@ -24,7 +24,7 @@ Clone the Repository
 
 ```commandline
 git clone git@github.com:eoyewobi/sigtech_task.git
-cd your-repository
+cd sigtech_task
 ```
 
 Before running commands please ensure you have the correct libraries installed.
@@ -63,6 +63,10 @@ Start the containers for all the services defined in the docker-compose.yml.
 Access the Application
 
 Your application should now be accessible on http://localhost:your-port.
+```commandline
+http://localhost:80
+```
+
 If using MySQL, you can connect to the database using the following details:
 Host: localhost
 Port: 3306
