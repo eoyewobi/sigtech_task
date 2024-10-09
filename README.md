@@ -20,8 +20,15 @@ Getting Started
 Clone the Repository
 
 ```commandline
-git clone https://github.com/your-username/your-repository.git
+git clone git@github.com:eoyewobi/sigtech_task.git
 cd your-repository
+```
+
+Before running commands please ensure you have the correct libraries installed.
+
+You can do this by running this command in the terminal at the root of the project
+```commandline
+pip install -r requirements.txt
 ```
 
 
