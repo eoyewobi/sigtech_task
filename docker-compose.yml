@@ -4,7 +4,7 @@ services:
   mysql:
     image: mysql/mysql-server:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"  # Using environment variables
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
       MYSQL_DATABASE: "${MYSQL_DATABASE}"
     ports:
       - "3306:3306"
@@ -25,7 +25,7 @@ services:
       DB_HOST: mysql
       DB_NAME: "${MYSQL_DATABASE}"
       DB_USER: "root"
-      DB_PASSWORD: "${MYSQL_ROOT_PASSWORD}"  # Avoiding hardcoded passwords
+      DB_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
 
 networks:
   app-network:
