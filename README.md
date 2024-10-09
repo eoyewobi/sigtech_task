@@ -64,7 +64,7 @@ Access the Application
 
 Your application should now be accessible on http://localhost:your-port.
 ```commandline
-http://localhost:80
+http://localhost:80 or http://127.0.0.1:80 
 ```
 
 If using MySQL, you can connect to the database using the following details:
