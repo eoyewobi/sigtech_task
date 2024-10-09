@@ -4,7 +4,6 @@ import mysql.connector
 
 app = Flask(__name__)
 
-# Get the MySQL credentials from environment variables
 db_name = os.getenv('DB_NAME')
 db_user = os.getenv('DB_USER')
 db_password = os.getenv('DB_PASSWORD')
